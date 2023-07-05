@@ -1,0 +1,31 @@
+.container {
+    height: 352px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(../assets/banner-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.innerContainer {
+    width: var(--max-width);
+    margin: 0 auto;
+
+    padding-bottom: 32px;
+}
+
+.container h2 {
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--color-white);
+}
+
+.container p {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--color-white);
+}
