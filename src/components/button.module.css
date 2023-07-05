@@ -1,0 +1,33 @@
+.button {
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.transparent {
+    border: 1px solid var(--color-blue100);
+    background-color: transparent;
+    color: var(--color-blue100);
+}
+
+.transparent:hover {
+    background-color: var(--color-blue20);
+}
+
+.blue {
+    background-color: var(--color-blue100);
+    color: var(--color-white);
+}
+
+.blue:hover {
+    background-color: var(--color-blue80);
+}
+
+.sm {
+    padding: 16px;
+}
+
+.md {
+    padding: 16px 70px;
+}
