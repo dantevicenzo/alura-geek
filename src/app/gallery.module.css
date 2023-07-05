@@ -1,5 +1,5 @@
 .container {
-    width: var(--max-width);
+    max-width: var(--max-width);
     margin: 64px auto;
 }
 
@@ -34,6 +34,8 @@
     
     list-style: none;
 }
+
+
 
 .productsList li {
     display: flex;

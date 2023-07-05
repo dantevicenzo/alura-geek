@@ -10,7 +10,8 @@
 }
 
 .innerContainer {
-    width: var(--max-width);
+    max-width: var(--max-width);
+    width: 100%;
     margin: 0 auto;
 
     padding-bottom: 32px;
