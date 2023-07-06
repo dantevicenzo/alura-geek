@@ -32,6 +32,7 @@
     margin-top: 16px;
 
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     
     list-style: none;
@@ -63,4 +64,31 @@
     font-size: 16px;
     font-weight: 700;
     color: var(--color-blue100);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 32px auto;
+    }
+
+    .titleContainer h3 {
+        font-size: 22px;
+    }
+
+    .productsList li img {
+        width: 164px;
+        height: 174px;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .container {
+        margin: 16px auto;
+        padding: 0 16px;
+    }
+    .productsList li img {
+        width: 156px;
+        height: 174px;
+    }
 }

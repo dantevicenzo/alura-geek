@@ -30,3 +30,24 @@
     margin-bottom: 16px;
     color: var(--color-white);
 }
+
+@media screen and (max-width: 425px) {
+    .container {
+        height: 192px;
+    }
+
+    .container h2 {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+    
+    .container p {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .innerContainer {
+        padding: 0 16px 16px;
+    }
+}
