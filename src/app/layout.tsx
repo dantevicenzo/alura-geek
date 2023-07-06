@@ -3,6 +3,7 @@ import { Header } from '@/components/header'
 import './globals.css'
 import { Raleway } from 'next/font/google'
 import { ReactNode } from 'react'
+import { Footer } from '@/components/footer'
 
 const raleway = Raleway({
   weight: ['400', '500', '700'],
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className={raleway.variable}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
