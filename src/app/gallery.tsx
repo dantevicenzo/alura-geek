@@ -6,19 +6,26 @@ import arrowRight from '@/assets/arrow_right.svg'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-interface IProduct {
+export interface IProduct {
   id: number
   imageUrl: string
+  category: string
   name: string
   price: string
+  description: string
 }
 
 interface IGalleryProps {
   title: string
   products: IProduct[]
+  showSeeAllButton?: boolean
 }
 
-export function Gallery({ title, products }: IGalleryProps) {
+export function Gallery({
+  title,
+  products,
+  showSeeAllButton = true,
+}: IGalleryProps) {
   const [windowSize, setWindowSize] = useState('')
 
   useEffect(() => {
@@ -48,9 +55,11 @@ export function Gallery({ title, products }: IGalleryProps) {
     <div className={styles.container}>
       <div className={styles.titleContainer}>
         <h3>{title}</h3>
-        <Link href="">
-          Ver tudo <Image src={arrowRight} alt="" />
-        </Link>
+        {showSeeAllButton && (
+          <Link href="">
+            Ver tudo <Image src={arrowRight} alt="" />
+          </Link>
+        )}
       </div>
       <ul className={styles.productsList}>
         {displayedProducts.map((product) => (
@@ -58,7 +67,7 @@ export function Gallery({ title, products }: IGalleryProps) {
             <Image src={product.imageUrl} height={174} width={176} alt="" />
             <span>{product.name}</span>
             <strong>{product.price}</strong>
-            <a href="">Ver Produto</a>
+            <Link href={`/products/${product.id}`}>Ver Produto</Link>
           </li>
         ))}
       </ul>

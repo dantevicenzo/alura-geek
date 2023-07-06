@@ -1,10 +1,14 @@
-export const products = [
+import { IProduct } from './gallery'
+
+export const products: IProduct[] = [
   {
     id: 1,
     imageUrl: 'https://source.unsplash.com/6FDXGY9J6y4',
     category: 'Star Wars',
     name: 'Produto XYZ',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 2,
@@ -12,6 +16,8 @@ export const products = [
     category: 'Star Wars',
     name: 'Produto XYZ',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 3,
@@ -19,6 +25,8 @@ export const products = [
     category: 'Star Wars',
     name: 'Produto XYZ',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 4,
@@ -26,6 +34,8 @@ export const products = [
     category: 'Star Wars',
     name: 'Produto XYZ',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 5,
@@ -33,6 +43,8 @@ export const products = [
     category: 'Star Wars',
     name: 'Produto XYZ',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 6,
@@ -40,6 +52,8 @@ export const products = [
     category: 'Star Wars',
     name: 'Produto XYZ',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 7,
@@ -47,6 +61,8 @@ export const products = [
     category: 'Consoles',
     name: 'Controle XYZ',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 8,
@@ -54,6 +70,8 @@ export const products = [
     category: 'Consoles',
     name: 'Controle e console XYZ',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 9,
@@ -61,6 +79,8 @@ export const products = [
     category: 'Consoles',
     name: 'Console XYZ',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 10,
@@ -68,6 +88,8 @@ export const products = [
     category: 'Consoles',
     name: 'Controle XYZ',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 11,
@@ -75,6 +97,8 @@ export const products = [
     category: 'Consoles',
     name: 'Console XYZ',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 12,
@@ -82,6 +106,8 @@ export const products = [
     category: 'Consoles',
     name: 'Game Boy Color',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 13,
@@ -89,6 +115,8 @@ export const products = [
     category: 'Diversos',
     name: 'Camisa Atari',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 14,
@@ -96,6 +124,8 @@ export const products = [
     category: 'Diversos',
     name: 'Camisa SNES',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 15,
@@ -103,6 +133,8 @@ export const products = [
     category: 'Diversos',
     name: 'Controle e console XYZ',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 16,
@@ -110,6 +142,8 @@ export const products = [
     category: 'Diversos',
     name: 'Controle e console XYZ',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 17,
@@ -117,6 +151,8 @@ export const products = [
     category: 'Diversos',
     name: 'Controle e console XYZ',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
   {
     id: 18,
@@ -124,5 +160,7 @@ export const products = [
     category: 'Diversos',
     name: 'Controle e console XYZ',
     price: 'R$ 60,00',
+    description:
+      'Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam',
   },
 ]
