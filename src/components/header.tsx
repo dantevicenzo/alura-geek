@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styles from './header.module.css'
 import logo from '@/assets/logo.svg'
+import searchIcon from '@/assets/search-icon.svg'
 import { Button } from './button'
 
 export function Header() {
@@ -21,6 +22,13 @@ export function Header() {
           Login
         </Button>
       </div>
+      <Image
+        src={searchIcon}
+        height={24}
+        width={24}
+        alt=""
+        className={styles.searchIcon}
+      />
     </header>
   )
 }

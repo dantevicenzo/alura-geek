@@ -33,3 +33,37 @@
     background-position: right 16px center;
     background-size: 24px 24px;
 }
+
+.searchIcon {
+    display: none;
+    color: var(--color-black100);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 16px 32px;
+    }
+
+    .searchContainer img {
+        width: 100px;
+        height: 28px;
+    }
+
+    .searchInput {
+        max-width: 272px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .container {
+        padding: 16px;
+    }
+
+    .searchInputContainer {
+        display: none;
+    }
+    
+    .searchIcon {
+        display: inline;
+    }
+}
