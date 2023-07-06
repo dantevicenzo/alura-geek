@@ -25,11 +25,22 @@ export function Header() {
           />
         </div>
       </div>
+
       {pathname === '/' && (
         <div>
           <Link href="/login">
             <Button variantColor="transparent" variantPadding="md">
               Login
+            </Button>
+          </Link>
+        </div>
+      )}
+
+      {pathname === '/products/add' && (
+        <div>
+          <Link href="/products">
+            <Button variantColor="transparent" variantPadding="sm">
+              Menu administrador
             </Button>
           </Link>
         </div>

@@ -36,8 +36,13 @@
     padding: 20.5px 185.5px;
 }
 
+.fill {
+    padding: 16px 0;
+    width: 100%;
+}
+
 @media screen and (max-width: 768px) {
-    .button {
+    .responsivity {
         font-size: 14px;
         font-weight: 600;
     }

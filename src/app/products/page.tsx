@@ -4,6 +4,7 @@ import Image from 'next/image'
 import editIcon from '@/assets/edit-icon.svg'
 import deleteIcon from '@/assets/delete-icon.svg'
 import { products } from '../db'
+import Link from 'next/link'
 
 export default function Products() {
   return (
@@ -11,9 +12,11 @@ export default function Products() {
       <div className={styles.innerContainer}>
         <div className={styles.titleContainer}>
           <strong>Todos os produtos</strong>
-          <Button variantColor="blue" variantPadding="sm">
-            Adicionar Produto
-          </Button>
+          <Link href="/products/add">
+            <Button variantColor="blue" variantPadding="sm">
+              Adicionar Produto
+            </Button>
+          </Link>
         </div>
         <ul className={styles.productsList}>
           {products.map((product) => (

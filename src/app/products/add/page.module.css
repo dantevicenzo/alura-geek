@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  padding: 64px 32px;
+  background-color: var(--color-black05);
+}
+
+.form {
+  width: 559px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 32px;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .form h1 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    padding: 16px;
+  }
+
+}
