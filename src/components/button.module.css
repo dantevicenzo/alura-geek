@@ -31,3 +31,23 @@
 .md {
     padding: 16px 70px;
 }
+
+@media screen and (max-width: 768px) {
+    .button {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .sm {
+        padding: 12px 16px;
+    }
+    
+    .md {
+        padding: 12px 64px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .md {
+        padding: 12px 47.5px;
+    }
+}

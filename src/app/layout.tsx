@@ -6,7 +6,7 @@ import { ReactNode } from 'react'
 import { Footer } from '@/components/footer'
 
 const raleway = Raleway({
-  weight: ['400', '500', '700'],
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-raleway-vr',
 })
@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
