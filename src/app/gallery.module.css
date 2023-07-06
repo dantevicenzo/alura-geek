@@ -1,6 +1,8 @@
 .container {
     max-width: var(--max-width);
     margin: 64px auto;
+
+    padding: 0 32px;
 }
 
 .titleContainer {
@@ -34,8 +36,6 @@
     
     list-style: none;
 }
-
-
 
 .productsList li {
     display: flex;

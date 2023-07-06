@@ -1,5 +1,5 @@
 :root {
-  --max-width: 1136px;
+  --max-width: calc(1136px + 64px);
 
   --color-blue10: #EAF2FD;
   --color-blue20: #D4E4FA;
