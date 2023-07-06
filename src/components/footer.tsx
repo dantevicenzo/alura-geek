@@ -4,6 +4,8 @@ import styles from './footer.module.css'
 import logo from '@/assets/logo.svg'
 import { Button } from './button'
 import Link from 'next/link'
+import { Input } from './input'
+import { Textarea } from './textarea'
 
 export function Footer() {
   return (
@@ -37,15 +39,9 @@ export function Footer() {
 
           <form action="submit" className={styles.form}>
             <strong>Fale conosco</strong>
-            <div className={styles.customInputWrapper}>
-              <input id="name" type="text" placeholder="Nome" />
-              <label htmlFor="name">Nome</label>
-            </div>
-            <div
-              className={`${styles.customInputWrapper} ${styles.textareaMarginTop}`}
-            >
-              <textarea id="message" placeholder="Escreva sua mensagem" />
-              <label htmlFor="message">Escreva sua mensagem</label>
+            <Input id="name" type="text" placeholder="Nome" />
+            <div className={styles.textareaMarginTop}>
+              <Textarea id="message" placeholder="Escreva sua mensagem" />
             </div>
             <Button type="submit" variantColor="blue" variantPadding="sm">
               Enviar Mensagem

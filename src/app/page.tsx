@@ -1,5 +1,3 @@
-// import styles from './page.module.css'
-
 import { Gallery } from './gallery'
 import { Hero } from './hero'
 

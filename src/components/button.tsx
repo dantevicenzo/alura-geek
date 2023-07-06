@@ -5,7 +5,7 @@ import styles from './button.module.css'
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode
   variantColor: 'blue' | 'transparent'
-  variantPadding: 'sm' | 'md'
+  variantPadding: 'sm' | 'md' | 'lg'
 }
 
 export function Button({
