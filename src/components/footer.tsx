@@ -12,30 +12,32 @@ export function Footer() {
     <footer>
       <div className={styles.container}>
         <div className={styles.innerContainer}>
-          <Image src={logo} height={50} width={176} alt="" />
+          <div className={styles.logoNavContainer}>
+            <Image src={logo} height={50} width={176} alt="" />
 
-          <nav className={styles.nav}>
-            <ul>
-              <li>
-                <Link href="">Quem somos nós</Link>
-              </li>
-              <li>
-                <Link href="">Política de privacidade</Link>
-              </li>
-              <li>
-                <Link href="">Programa fidelidade</Link>
-              </li>
-              <li>
-                <Link href="">Nossas lojas</Link>
-              </li>
-              <li>
-                <Link href="">Quero ser franqueado</Link>
-              </li>
-              <li>
-                <Link href="">Anuncie aqui</Link>
-              </li>
-            </ul>
-          </nav>
+            <nav className={styles.nav}>
+              <ul>
+                <li>
+                  <Link href="">Quem somos nós</Link>
+                </li>
+                <li>
+                  <Link href="">Política de privacidade</Link>
+                </li>
+                <li>
+                  <Link href="">Programa fidelidade</Link>
+                </li>
+                <li>
+                  <Link href="">Nossas lojas</Link>
+                </li>
+                <li>
+                  <Link href="">Quero ser franqueado</Link>
+                </li>
+                <li>
+                  <Link href="">Anuncie aqui</Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
 
           <form action="submit" className={styles.form}>
             <strong>Fale conosco</strong>

@@ -5,10 +5,18 @@
 .innerContainer {
     display: flex;
     justify-content: space-between;
-
+    width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 64px 32px;
+}
+
+.logoNavContainer {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 16px 112px;
+    min-width: 254px;
 }
 
 .nav ul {
@@ -31,75 +39,15 @@
 
     gap: 8px;
 
-    width: 50%;
-}
-
-.form label {
-    position: absolute;
-  top: 16px;
-  left: 12px;
-  pointer-events: none;
-  transition: opacity, top, color, font-size, 0.15s;
-  color: var(--color-black50)
-}
-
-.form input,
-.form textarea {
-    padding: 28px 12px 7px;
-    border-radius: 4px;
-    border: none;
-    font-size: 16px;
-    width: 100%;
-    color: var(--color-black100);
-    caret-color: var(--color-blue100);
-    border-bottom: 1px solid var(--color-black30);
-}
-
-.form input {
-    height: 53px;
+    width: 560px;
 }
 
 .form textarea {
-    resize: none;
-    flex-grow: 1;
-
-
-    overflow: hidden;
+    height: 82px;
 }
 
-.form input:focus,
-.form textarea:focus {
-    outline: none;
-    box-shadow: none;
-    padding-bottom: 0.375rem;
-    border-bottom: 2px solid var(--color-blue100);
-}
-
-.form input:focus + label,
-.form input:not(:placeholder-shown) + label,
-.form textarea:focus + label,
-.form textarea:not(:placeholder-shown) + label {
-    font-size: 0.75rem;
-    top: 8px;
-  }
-
-  .form input:focus + label,
-  .form textarea:focus + label {
-    color: var(--color-blue100);
-  }
-
-  .form input::placeholder,
-  .form textarea::placeholder {
-    opacity: 0;
-    color: var(--color-black50);
-  }
-
-
-
-.customInputWrapper {
-    position: relative;
-  width: 100%;
-
+.form button {
+    align-self: flex-start;
 }
 
 .developedBy {
@@ -118,4 +66,34 @@
 
 .textareaMarginTop {
     margin-top: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .innerContainer {
+        padding: 32px;
+        gap: 16px;
+    }
+
+    .logoNavContainer {
+        flex-direction: column;
+    }
+    
+    .form {
+        max-width: 434px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .innerContainer {
+        padding: 16px;
+        gap: 32px;
+
+        flex-direction: column;
+    }
+
+    .logoNavContainer {
+        align-items: center;
+        text-align: center;
+    }
 }
