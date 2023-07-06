@@ -1,5 +1,37 @@
-// import styles from './page.module.css'
+import { Button } from '@/components/button'
+import styles from './page.module.css'
+import Image from 'next/image'
+import editIcon from '@/assets/edit-icon.svg'
+import deleteIcon from '@/assets/delete-icon.svg'
+import { products } from '../db'
 
 export default function Products() {
-  return <h1>Products</h1>
+  return (
+    <div className={styles.container}>
+      <div className={styles.innerContainer}>
+        <div className={styles.titleContainer}>
+          <strong>Todos os produtos</strong>
+          <Button variantColor="blue" variantPadding="sm">
+            Adicionar Produto
+          </Button>
+        </div>
+        <ul className={styles.productsList}>
+          {products.map((product) => (
+            <li key={product.id}>
+              <Image src={product.imageUrl} width={176} height={174} alt="" />
+              <span>{product.name}</span>
+              <strong>{product.price}</strong>
+              <span>#{product.id}</span>
+              <button className={styles.delete}>
+                <Image src={deleteIcon} width={24} height={24} alt="" />
+              </button>
+              <button className={styles.edit}>
+                <Image src={editIcon} width={24} height={24} alt="" />
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )
 }

@@ -1,8 +1,105 @@
-.main {
+.container {
   display: flex;
-  flex-direction: column;
+  
+  background-color: var(--color-black05);
+}
+
+.innerContainer {
+  max-width: var(--max-width);
+  padding: 64px 32px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.titleContainer {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+}
+
+.titleContainer strong {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.productsList {
+  margin-top: 16px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px 16px;
+}
+
+.productsList li {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.productsList li > img {
+  object-fit: cover;
+}
+
+.productsList span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.productsList strong {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.productsList button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.edit {
+  right: 8px;
+  top: 8px;
+}
+
+.delete {
+  right: 48px;
+  top: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .innerContainer {
+    padding: 32px 32px;
+  }
+
+  .titleContainer strong {
+    font-size: 22px;
+  }
+
+  .productsList {
+    gap: 16px;
+  }
+
+  .productsList li > img {
+    width: 164px;
+    height: 174px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .titleContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .titleContainer button {
+    align-self: flex-start;
+  }
+
+  .productsList li > img {
+    width: 140px;
+    height: 174px;
+  }
 }
