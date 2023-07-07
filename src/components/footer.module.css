@@ -36,9 +36,7 @@
 .form {
     display: flex;
     flex-direction: column;
-
     gap: 8px;
-
     width: 560px;
 }
 
@@ -66,6 +64,15 @@
 
 .textareaMarginTop {
     margin-top: 8px;
+}
+
+.error {
+    height: 16px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-red100);
 }
 
 @media screen and (max-width: 768px) {
