@@ -16,12 +16,14 @@ export interface IProduct {
 }
 
 interface IGalleryProps {
+  id: string
   title: string
   products: IProduct[]
   showSeeAllButton?: boolean
 }
 
 export function Gallery({
+  id,
   title,
   products,
   showSeeAllButton = true,
@@ -52,7 +54,7 @@ export function Gallery({
   const displayedProducts = products.slice(0, maxProducts)
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container} id={id}>
       <div className={styles.titleContainer}>
         <h3>{title}</h3>
         {showSeeAllButton && (
@@ -71,6 +73,6 @@ export function Gallery({
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   )
 }
