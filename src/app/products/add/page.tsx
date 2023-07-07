@@ -1,8 +1,8 @@
 import { Button } from '@/components/button'
 import styles from './page.module.css'
 
-import { Input } from '@/components/input'
-import { Textarea } from '@/components/textarea'
+import Input from '@/components/input'
+import Textarea from '@/components/textarea'
 import Link from 'next/link'
 
 export default function AddNewProduct() {

@@ -1,7 +1,7 @@
 import { Button } from '@/components/button'
 import styles from './page.module.css'
 
-import { Input } from '@/components/input'
+import Input from '@/components/input'
 import Link from 'next/link'
 
 export default function Login() {
