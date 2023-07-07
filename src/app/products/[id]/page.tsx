@@ -25,6 +25,7 @@ export default function Product({ params }: IProductProps) {
         </div>
       </div>
       <Gallery
+        id="similarProducts"
         title="Produtos similares"
         products={products.filter(
           (product) => product.category === selectedProduct.category,
