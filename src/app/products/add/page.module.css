@@ -17,6 +17,18 @@
   font-weight: 700;
 }
 
+.form textarea {
+  height: 82px;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-red100);
+}
+
 @media screen and (max-width: 768px) {
   .container {
     padding: 32px;
