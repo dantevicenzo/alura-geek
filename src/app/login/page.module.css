@@ -10,14 +10,29 @@
 
   display: flex;
   flex-direction: column;
-  align-items: center;
 
-  gap: 24.35px;
+  /* gap: 24.35px; */
 }
 
 .form strong {
   font-size: 18px;
   font-weight: 700;
+  text-align: center;
+
+  margin-bottom: 24.35px;
+}
+
+.valid {
+  margin-bottom: 24.35px;
+}
+
+.error {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-red100);
 }
 
 @media screen and (max-width: 768px){
