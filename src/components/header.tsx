@@ -7,9 +7,28 @@ import searchIcon from '@/assets/search-icon.svg'
 import { Button } from './button'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { ChangeEvent, useState } from 'react'
+import { useLocalStorage } from '@/hooks/useLocalStorage'
+import { IProduct } from '@/app/gallery'
 
 export function Header() {
   const pathname = usePathname()
+  const products = useLocalStorage()
+  const [suggestList, setSuggestList] = useState<IProduct[]>([])
+  const [searchTerm, setSearchTerm] = useState('')
+
+  const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
+    const newSearchTerm = event.target.value
+    setSearchTerm(newSearchTerm)
+    console.log(newSearchTerm)
+    const newSuggestList = products.filter(
+      (product) =>
+        product.name.toLowerCase().includes(newSearchTerm.toLowerCase()) ||
+        product.category.toLowerCase().includes(newSearchTerm.toLowerCase()),
+    )
+    console.log(newSuggestList)
+    setSuggestList(newSuggestList)
+  }
 
   return (
     <header className={styles.container}>
@@ -20,9 +39,20 @@ export function Header() {
         <div className={styles.searchInputContainer}>
           <input
             type="text"
+            value={searchTerm}
+            onChange={handleSearch}
             placeholder="O que deseja encontrar?"
             className={styles.searchInput}
           />
+          {suggestList.length > 0 && searchTerm !== '' && (
+            <ul className={styles.suggest}>
+              {suggestList.map((suggest, index) => (
+                <Link key={index} href={`/products/${suggest.id}`}>
+                  <li>{suggest.name}</li>
+                </Link>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
 

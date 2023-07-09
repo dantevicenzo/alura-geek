@@ -32,11 +32,42 @@
     background-repeat: no-repeat;
     background-position: right 16px center;
     background-size: 24px 24px;
+
+    position: relative;
 }
 
 .searchIcon {
     display: none;
     color: var(--color-black100);
+}
+
+.searchInput:focus + .suggest {
+    visibility: visible;
+}
+
+.suggest {
+    position: absolute;
+    visibility: hidden;
+    list-style: none;
+    width: 393px;
+    height: 106px;
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 1px;
+}
+
+.suggest li {
+    background-color: var(--color-black05);
+
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggest li:hover {
+    background-color: var(--color-white);
 }
 
 @media screen and (max-width: 768px) {
@@ -50,6 +81,10 @@
     }
 
     .searchInput {
+        max-width: 272px;
+    }
+
+    .suggest {
         max-width: 272px;
     }
 }
