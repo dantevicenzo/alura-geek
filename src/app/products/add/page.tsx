@@ -71,7 +71,9 @@ export default function AddNewProduct() {
       (latestId, product) => (product.id > latestId ? product.id : latestId),
       0,
     )
+
     const newProductId = latestId + 1
+
     const newProduct: IProduct = {
       id: newProductId,
       imageUrl: formData.url,
@@ -80,7 +82,11 @@ export default function AddNewProduct() {
       price: formData.price * 100,
       description: formData.description,
     }
+
     setProducts((prevState) => [...prevState, newProduct])
+
+    alert('O produto foi adicionado com sucesso.')
+
     reset()
   }
 

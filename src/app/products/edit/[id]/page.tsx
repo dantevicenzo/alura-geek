@@ -104,6 +104,8 @@ export default function EditProduct({ params }: IEditProductProps) {
 
     setProducts(updatedProducts)
 
+    alert('O produto foi atualizado com sucesso.')
+
     reset()
   }
 
