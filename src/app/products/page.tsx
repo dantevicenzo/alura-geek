@@ -49,9 +49,11 @@ export default function Products() {
               >
                 <Image src={deleteIcon} width={24} height={24} alt="" />
               </button>
-              <button className={styles.edit}>
-                <Image src={editIcon} width={24} height={24} alt="" />
-              </button>
+              <Link href={`/products/edit/${product.id}`}>
+                <button className={styles.edit}>
+                  <Image src={editIcon} width={24} height={24} alt="" />
+                </button>
+              </Link>
             </li>
           ))}
         </ul>
