@@ -1,8 +1,10 @@
-import { products } from '@/app/db'
+'use client'
+
 import Image from 'next/image'
 import styles from './page.module.css'
 import { Gallery } from '@/app/gallery'
 import { formatPriceInCents } from '@/utils/formatter'
+import { useLocalStorage } from '@/hooks/useLocalStorage'
 
 interface IProductProps {
   params: {
@@ -11,6 +13,7 @@ interface IProductProps {
 }
 
 export default function Product({ params }: IProductProps) {
+  const products = useLocalStorage()
   const selectedProduct = products.filter(
     (product) => product.id === Number(params.id),
   )[0]
