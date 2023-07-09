@@ -1,12 +1,29 @@
+'use client'
+
 import { Button } from '@/components/button'
 import styles from './page.module.css'
 import Image from 'next/image'
 import editIcon from '@/assets/edit-icon.svg'
 import deleteIcon from '@/assets/delete-icon.svg'
-import { products } from '../db'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import { IProduct } from '../gallery'
+import { useLocalStorage } from '@/hooks/useLocalStorage'
 
 export default function Products() {
+  const [products, setProducts] = useState<IProduct[]>(useLocalStorage())
+
+  useEffect(() => {
+    localStorage.setItem('@alura-geek:products-1.0.0', JSON.stringify(products))
+  }, [products])
+
+  function handleDeleteProduct(productToDelete: IProduct) {
+    const filteredProducts = products.filter(
+      (product) => product.id !== productToDelete.id,
+    )
+    setProducts(filteredProducts)
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
@@ -25,7 +42,10 @@ export default function Products() {
               <span>{product.name}</span>
               <strong>{product.price}</strong>
               <span>#{product.id}</span>
-              <button className={styles.delete}>
+              <button
+                className={styles.delete}
+                onClick={() => handleDeleteProduct(product)}
+              >
                 <Image src={deleteIcon} width={24} height={24} alt="" />
               </button>
               <button className={styles.edit}>

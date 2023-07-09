@@ -58,7 +58,7 @@ export function Gallery({
       <div className={styles.titleContainer}>
         <h3>{title}</h3>
         {showSeeAllButton && (
-          <Link href="">
+          <Link href="/login">
             Ver tudo <Image src={arrowRight} alt="" />
           </Link>
         )}
