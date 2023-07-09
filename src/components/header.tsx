@@ -66,7 +66,8 @@ export function Header() {
         </div>
       )}
 
-      {pathname === '/products/add' && (
+      {(pathname === '/products/add' ||
+        pathname.includes('/products/edit')) && (
         <div>
           <Link href="/products">
             <Button variantColor="transparent" variantPadding="sm">
