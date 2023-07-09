@@ -9,6 +9,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { IProduct } from '../gallery'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
+import { formatPriceInCents } from '@/utils/formatter'
 
 export default function Products() {
   const [products, setProducts] = useState<IProduct[]>(useLocalStorage())
@@ -40,7 +41,7 @@ export default function Products() {
             <li key={product.id}>
               <Image src={product.imageUrl} width={176} height={174} alt="" />
               <span>{product.name}</span>
-              <strong>{product.price}</strong>
+              <strong>{formatPriceInCents(product.price)}</strong>
               <span>#{product.id}</span>
               <button
                 className={styles.delete}

@@ -8,6 +8,9 @@ import Textarea from '@/components/textarea'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
+import { IProduct } from '@/app/gallery'
+import { useEffect, useState } from 'react'
+import { useLocalStorage } from '@/hooks/useLocalStorage'
 
 const addNewProductFormValidationSchema = z.object({
   url: z
@@ -47,6 +50,12 @@ const addNewProductFormValidationSchema = z.object({
 type TAddNewProductFormData = z.infer<typeof addNewProductFormValidationSchema>
 
 export default function AddNewProduct() {
+  const [products, setProducts] = useState<IProduct[]>(useLocalStorage())
+
+  useEffect(() => {
+    localStorage.setItem('@alura-geek:products-1.0.0', JSON.stringify(products))
+  }, [products])
+
   const {
     register,
     handleSubmit,
@@ -58,6 +67,20 @@ export default function AddNewProduct() {
   })
 
   function onSubmit(formData: TAddNewProductFormData) {
+    const latestId = products.reduce(
+      (latestId, product) => (product.id > latestId ? product.id : latestId),
+      0,
+    )
+    const newProductId = latestId + 1
+    const newProduct: IProduct = {
+      id: newProductId,
+      imageUrl: formData.url,
+      category: formData.category,
+      name: formData.name,
+      price: formData.price * 100,
+      description: formData.description,
+    }
+    setProducts((prevState) => [...prevState, newProduct])
     reset()
   }
 
@@ -96,6 +119,9 @@ export default function AddNewProduct() {
             setValueAs: (v) => (v === '' ? undefined : parseFloat(v)),
           })}
           type="number"
+          pattern="[0-9]+([,\.][0-9]+)?"
+          min="0"
+          step="any"
           placeholder="Preço do produto"
         />
         {errors.price && (

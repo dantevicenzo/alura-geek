@@ -2,6 +2,7 @@ import { products } from '@/app/db'
 import Image from 'next/image'
 import styles from './page.module.css'
 import { Gallery } from '@/app/gallery'
+import { formatPriceInCents } from '@/utils/formatter'
 
 interface IProductProps {
   params: {
@@ -20,7 +21,7 @@ export default function Product({ params }: IProductProps) {
         <Image src={selectedProduct.imageUrl} width={560} height={403} alt="" />
         <div className={styles.details}>
           <h1>{selectedProduct.name}</h1>
-          <strong>{selectedProduct.price}</strong>
+          <strong>{formatPriceInCents(selectedProduct.price)}</strong>
           <p>{selectedProduct.description}</p>
         </div>
       </div>

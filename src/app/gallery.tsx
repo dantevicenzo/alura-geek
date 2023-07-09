@@ -5,13 +5,14 @@ import styles from './gallery.module.css'
 import arrowRight from '@/assets/arrow_right.svg'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { formatPriceInCents } from '@/utils/formatter'
 
 export interface IProduct {
   id: number
   imageUrl: string
   category: string
   name: string
-  price: string
+  price: number
   description: string
 }
 
@@ -68,7 +69,7 @@ export function Gallery({
           <li key={product.id}>
             <Image src={product.imageUrl} height={174} width={176} alt="" />
             <span>{product.name}</span>
-            <strong>{product.price}</strong>
+            <strong>{formatPriceInCents(product.price)}</strong>
             <Link href={`/products/${product.id}`}>Ver Produto</Link>
           </li>
         ))}
