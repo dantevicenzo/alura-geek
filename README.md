@@ -9,3 +9,8 @@ https://www.figma.com/file/itJpWbvHxSUcUeMPy1lmof/AluraGeek?type=design&node-id=
 - Typescript
 
 ### Resultado: https://alura-geek-taupe.vercel.app/
+
+### Como Fazer Login:
+
+- Use qualquer e-mail válido: Ex: teste@gmail.com
+- Use qualquer senha: Ex: teste123
