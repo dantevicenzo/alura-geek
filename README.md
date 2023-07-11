@@ -10,7 +10,7 @@ https://www.figma.com/file/itJpWbvHxSUcUeMPy1lmof/AluraGeek?type=design&node-id=
 
 ### Resultado: https://alura-geek-taupe.vercel.app/
 
-### Como Fazer Login:
+### Como Fazer Login e Testar a Plataforma:
 
-- Use qualquer e-mail válido: Ex: teste@gmail.com
-- Use qualquer senha: Ex: teste123
+- Use qualquer e-mail válido, exemplo: teste@gmail.com
+- Use qualquer senha, exemplo: teste123
