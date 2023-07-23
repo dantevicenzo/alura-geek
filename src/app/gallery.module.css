@@ -31,9 +31,10 @@
 .productsList {
     margin-top: 16px;
 
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    
     gap: 16px;
     
     list-style: none;
@@ -46,7 +47,10 @@
 }
 
 .productsList li img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    aspect-ratio: 88 / 87;
 }
 
 .productsList li span {
@@ -72,13 +76,16 @@
         margin: 32px auto;
     }
 
+    .productsList {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
     .titleContainer h3 {
         font-size: 22px;
     }
 
     .productsList li img {
-        width: 164px;
-        height: 174px;
+        aspect-ratio: 82 / 87;
     }
 }
 
@@ -88,8 +95,12 @@
         margin: 16px auto;
         padding: 0 16px;
     }
+
+    .productsList {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .productsList li img {
-        width: 156px;
-        height: 174px;
+        aspect-ratio: 26 / 29;
     }
 }
