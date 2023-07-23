@@ -33,9 +33,9 @@ export function Gallery({
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 767) {
+      if (window.innerWidth <= 424) {
         setWindowSize('mobile')
-      } else if (window.innerWidth <= 1180) {
+      } else if (window.innerWidth <= 767) {
         setWindowSize('tablet')
       } else {
         setWindowSize('desktop')
