@@ -45,6 +45,14 @@
     visibility: visible;
 }
 
+.suggest:focus {
+    visibility: visible;
+}
+
+.suggest:hover {
+    visibility: visible;
+}
+
 .suggest {
     position: absolute;
     visibility: hidden;
