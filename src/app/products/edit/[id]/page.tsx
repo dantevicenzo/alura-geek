@@ -71,7 +71,8 @@ export default function EditProduct({ params }: IEditProductProps) {
     setValue('name', productToEdit?.name as string)
     setValue('price', (productToEdit?.price as number) / 100)
     setValue('url', productToEdit?.imageUrl as string)
-  })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const {
     register,
